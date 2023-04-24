@@ -9,5 +9,10 @@ textareaEl.addEventListener('keydown',()=>{
 })
 updateReaminingCounter();
 function updateReaminingCounter(){
-    remainingCounterEl.innerText=textareaEl.getAttribute("maxLength")-textareaEl.value.length;
+    if(textareaEl.getAttribute("maxlength")-textareaEl.value.length==491){
+        remainingCounterEl.innerText=(textareaEl.getAttribute("maxlength")-textareaEl.value.length)+9;
+    }else{
+        remainingCounterEl.innerText=(textareaEl.getAttribute("maxlength")-textareaEl.value.length);
+    }
+    
 }
